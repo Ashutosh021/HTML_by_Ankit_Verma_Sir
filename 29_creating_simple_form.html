@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            margin: 5%;
+            width: 300px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            padding: 10px;
+            margin: 5%;
+        }
+        button{
+            margin-left: 30%;
+            width: 120px;
+            padding: 10px;
+            background-color: rgb(108, 230, 108);
+            color: rgb(209, 118, 0);
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            border: 3px solid black;
+        }
+        button:hover{
+            background-color: rgb(209,118,0);
+            color: rgb(108, 230, 108);
+        }
+        label{
+            color: crimson;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form action="">
+            <label for="name" >Enter Name</label>
+            <input type="text" id="name">
+            <label for="email">Enter your E-mail</label>
+            <input type="email" id="email">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

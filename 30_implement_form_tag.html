@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implement Form Tag</title>
+    <style>
+        *{
+            /* margin: 0; */
+            /* padding: 0; */
+            box-sizing: border-box;
+        }
+        .main{
+            border: 5px solid rgb(230, 185, 185);
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+        }
+        button{
+            margin-top: 20px;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form action="student.php"></form>
+        <h3>Enter Your Name</h3>
+        <input type="text" placeholder="Name">
+
+        <h3>Choose Section</h3>
+        <input type="radio" value="Section A" name="section" id="sectiona">
+        <label for="sectiona">Section A</label>
+        <input type="radio" value="Section B" name="section" id="sectionb">
+        <label for="sectionb">Section B</label>
+        <input type="radio" value="Section C" name="section" id="sectionc">
+        <label for="sectionc">Section C</label>
+        <br>
+        <h3>Enter Your Phone Number</h3>
+        <input type="number" placeholder="Phone no.">
+        <br>
+        <h3>Choose Your Course</h3>
+        <select name="Course" id="Course">
+            <option value="no-course">select course</option>
+            <option value="PCM">PCM</option>
+            <option value="PCMB">PCMB</option>
+            <option value="BIOLOGY">BIOLOGY</option>
+            <option value="COMMERCE">COMMERCE</option>
+        </select>
+        <br>
+        <h3>Choose Your Subject</h3>
+        <input type="checkbox" id="Math">
+        <label for="Math">Math</label>
+        <input type="checkbox" id="Science">
+        <label for="Science">Science</label>
+        <input type="checkbox" id="Chemistry">
+        <label for="Chemistry">Chemistry</label>
+        <input type="checkbox" id="Biology">
+        <label for="Biology">Biology</label>
+        <input type="checkbox" id="Physics">
+        <label for="Physics">Physics</label>
+        <input type="checkbox" id="English">
+        <label for="English">English</label>
+        <input type="checkbox" id="hindi">
+        <label for="hindi">hindi</label>
+        <br>
+        <h3>Tell About Yourself</h3>
+        <textarea name="explain" id="" cols="30" rows="10" placeholder="Your Answer  ......"></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </div>
+    
+
+</body>
+
+</html>

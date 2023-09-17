@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Star Pattern</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            margin: auto;
+            margin-top: 50px;
+            border: 4px solid gray;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(235, 232, 232);
+        }
+
+        input {
+            height: 40px;
+            font-size: 20px;
+            color: crimson;
+            padding: 10px;
+            margin: 30px auto;
+            border: 2px solid blue;
+            border-radius: 25px;
+            font-size: bold;
+        }
+
+        button {
+            margin: 20px auto;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+
+        button:hover {
+            background-color: grey;
+        }
+
+        .star {
+            width: 640px;
+            margin: auto;
+            margin-top: 50px;
+            border: 4px solid rgb(134, 247, 89);
+            border-radius: 10px;
+            text-align: center;
+            padding: 14px;
+            background-color: rgb(235, 232, 232);
+            color: crimson;
+        }
+
+        @media (max-width:650px) {
+            .box {
+                width: 100%;
+            }
+
+            .star {
+                width: 100%;
+                padding: 2px;
+            }
+        }
+    </style>
+
+    <script>
+        var text = "FOR BEST RESULT \nPC Input Limit : 50  \nMobile Limit : 25"
+        alert(text);
+        function star() {
+            var inp = document.getElementById('input').value;
+            console.log(inp);
+
+            var starPattern = "";
+            if (inp == 0) {
+                starPattern="INVALID INPUT";
+            }
+            else {
+
+                for (var i = 0; i < inp; i++) {
+                    for (var j = 1; j <= inp; j++) {
+                        if ((i + j) >= inp) {
+                            starPattern += "* ";
+                        } else {
+                            starPattern += " ";
+                        }
+                    }
+                    starPattern += "<br>";
+                }
+            }
+                document.querySelector('.star').innerHTML = starPattern;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="box">
+        <h2>ENTER SIZE FOR STAR PATTERN</h2>
+        <input type="number" id="input">
+        <button onclick="star()">Print Stars</button>
+        <div class="star">
+            <h1>Your pattern will be shown here</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

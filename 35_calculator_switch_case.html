@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using Switch-Case O/p in Alert BOX</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: flex;
+            width: 200px;
+            flex-direction: column;
+            margin: 10% auto;
+        }
+        
+        .btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+        input{
+            
+            width:200px;
+            padding: 5px;
+        }
+        button{
+            width: 40px;
+            font-size: 25px;
+            padding: 10px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="main">
+        <input type="number" id="inp1" placeholder="Enter first number"><br><br>
+        <input type="number" id="inp2" placeholder="Enter second number">
+        <div class="btn">
+            <button value="+" onclick="add()">+</button>
+            <button value="-" onclick="sub()">-</button><br><br>
+            <button value="*" onclick="mul()">*</button>
+            <button value="/" onclick="div()">/</button>
+        </div>
+    </div>
+
+    <script>
+        function add() {
+            var a = document.getElementById('inp1').value;
+            var b = document.getElementById('inp2').value;
+            a = parseInt(a); // Parse and store in 'a'
+            b = parseInt(b); // Parse and store in 'b'
+            alert("Sum is :- " + (a + b));
+        }
+        function sub() {
+            var a = document.getElementById('inp1').value;
+            var b = document.getElementById('inp2').value;
+            a = parseInt(a); // Parse and store in 'a'
+            b = parseInt(b); // Parse and store in 'b'
+            alert("Sub is :- " + (a - b));
+        }
+        function mul() {
+            var a = document.getElementById('inp1').value;
+            var b = document.getElementById('inp2').value;
+            a = parseInt(a); // Parse and store in 'a'
+            b = parseInt(b); // Parse and store in 'b'
+            alert("Multiply is :- " + (a * b));
+        }
+        function div() {
+            var a = document.getElementById('inp1').value;
+            var b = document.getElementById('inp2').value;
+            a = parseInt(a); // Parse and store in 'a'
+            b = parseInt(b); // Parse and store in 'b'
+            alert("Division is " + (a / b));
+        }
+    </script>
+</body>
+
+</html>
